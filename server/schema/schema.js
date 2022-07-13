@@ -46,17 +46,6 @@ const RootQuery = new GraphQLObjectType({
         return Product.findById(args.id);
       },
     },
-
-    // get products by category
-    productsByCategory: {
-      type: new GraphQLList(ProductType),
-      // args is the data that is passed in the query
-      // args.category is the category of the product
-      args: { category: { type: GraphQLString } },
-      resolve(parent, args) {
-        return Product.find({ category: args.category });
-      },
-    },
   },
 });
 
