@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema(
   {
-    category: {
-      type: String,
-      enum: ["Coming Soon", "Now Trending", "Best Rated"],
-      required: true,
-    },
     title: {
       type: String,
       required: true,
@@ -41,6 +36,11 @@ const ProductSchema = new mongoose.Schema(
         "Shooter",
         "Arcade",
       ],
+      required: true,
+    },
+    category: {
+      type: String,
+      enum: ["Coming Soon", "Now Trending", "Best Rated"],
       required: true,
     },
   },

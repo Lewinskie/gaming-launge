@@ -14,12 +14,12 @@ const ProductType = new GraphQLObjectType({
   // fields are the data that is returned from the database
   fields: () => ({
     id: { type: GraphQLID },
-    category: { type: GraphQLEnumType },
+    category: { type: GraphQLString },
     title: { type: GraphQLString },
     price: { type: GraphQLFloat },
     description: { type: GraphQLString },
     image: { type: GraphQLString },
-    genre: { type: GraphQLEnumType },
+    genre: { type: GraphQLString },
   }),
 });
 
@@ -61,7 +61,7 @@ const RootQuery = new GraphQLObjectType({
 });
 
 // Mutations
-const Mutation = new GraphQLObjectType({
+const mutation = new GraphQLObjectType({
   name: "Mutation",
 
   // different types of mutations
@@ -199,5 +199,5 @@ const Mutation = new GraphQLObjectType({
 
 module.exports = new GraphQLSchema({
   query: RootQuery,
-  mutation: Mutation,
+  mutation,
 });

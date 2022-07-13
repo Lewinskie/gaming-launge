@@ -6,8 +6,12 @@ const { graphqlHTTP } = require("express-graphql");
 // Graphql schema
 const schema = require("./schema/schema");
 const port = process.env.PORT || 4000;
+const connectDB = require("./config/connectDB");
 
 //middleware
+
+// connect to database
+connectDB();
 app.use(cors());
 app.use(
   "/graphql",
