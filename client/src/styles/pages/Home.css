@@ -1,0 +1,11 @@
+.home {
+  padding: 1rem 4rem;
+  position: relative;
+}
+
+/* media query */
+@media (max-width: 900px) {
+  .home {
+    padding: 1rem 1.5rem;
+  }
+}
