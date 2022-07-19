@@ -7,6 +7,7 @@ export const Data = [
     info: "New",
     img: "/images/farcry.jpg",
     category: "trending",
+    discount: 30,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const Data = [
     info: "New",
     img: "/images/god2.jpg",
     category: "trending",
+    discount: 30,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const Data = [
     info: "Top",
     img: "/images/tomclancy.jpg",
     category: "trending",
+    discount: 30,
   },
 
   {
@@ -35,6 +38,7 @@ export const Data = [
     info: "Top",
     img: "/images/lego.jpg",
     category: "newReleases",
+    discount: 30,
   },
 
   {
@@ -45,6 +49,7 @@ export const Data = [
     info: "Top",
     // img: Img5,
     category: "BestRated",
+    discount: 30,
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const Data = [
     info: "Top",
     // img: Img6,
     category: "BestRated",
+    discount: 30,
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ export const Data = [
     info: "Top",
     img: "/images/borderlands.jpg",
     category: "BestRated",
+    discount: 30,
   },
   {
     id: 8,
@@ -72,5 +79,6 @@ export const Data = [
     info: "Top",
     img: "/images/ghostwire.jpg",
     category: "newReleases",
+    discount: 30,
   },
 ];

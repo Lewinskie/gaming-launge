@@ -1,103 +1,61 @@
-import React from "react";
 import { Grid } from "@mui/material";
-import { Data } from "../utils/data";
-import "../styles/components/Offers.css";
-import { useMediaQuery } from "@mui/material";
+import React from "react";
+import "./offers.css";
 
 const Offers = () => {
-  const notMobile = useMediaQuery("(min-width:900px)");
-
   return (
-    <Grid
-      container
-      className="container"
-      spacing="2"
-      style={{
-        height: "100%",
-        width: "100%",
-        padding: "1rem",
-        overflow: "hidden",
-      }}
-    >
-      {Data.map((item, index) => {
-        return (
-          index === 0 && (
-            <Grid
-              item
-              className="first flicker-in-1 background"
-              key={index}
-              xs={12}
-              sm={12}
-              md={7}
-              lg={7}
-              xl={7}
-              style={{
-                minHeight: "70%",
-                maxHeight: "100%",
-                width: "100%",
-                background: `url(${item.img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center top",
-                backgroundRepeat: "no repeat",
-                borderRadius: "0.5rem",
-                // overflow: "hidden",
-              }}
-            />
-          )
-        );
-      })}
+    <Grid container style={{ height: "100vh" }}>
       <Grid
+        className="categories"
         item
-        className="second bounce-in-top "
-        xs={12}
-        sm={12}
-        md={5}
-        lg={5}
-        xl={5}
+        md={4}
+        lg={4}
+        xl={4}
         style={{
-          minHeight: "30%",
-          maxHeight: "100%",
           width: "100%",
-          display: "flex",
-          flexDirection: notMobile ? "column" : "row",
+          background: "pink",
+          minHeight: "50vh",
+          maxHeight: "80vh",
         }}
       >
-        {Data.map((item, index) => {
-          return index === 1 ? (
-            <div
-              className="secondInner"
-              key={index}
-              style={{
-                height: "100%",
-                width: "100%",
-                background: `url(${item.img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center top",
-                backgroundRepeat: "no repeat",
-                margin: "0.5px",
-                borderRadius: "0.5rem",
-              }}
-            />
-          ) : (
-            index === 2 && (
-              <div
-                className="secondInner"
-                key={index}
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "scale-down",
-                  background: `url(${item.img})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center top",
-                  backgroundRepeat: "no repeat",
-                  margin: "0.5px",
-                  borderRadius: "0.5rem",
-                }}
-              />
-            )
-          );
-        })}
+        <h1>Offers</h1>
+      </Grid>
+      <Grid container item xs={12} sm={12} md={8} lg={8} xl={8}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          xl={6}
+          style={{ background: "red", minHeight: "50vh" }}
+        >
+          <h1>Offers</h1>
+        </Grid>
+
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          xl={6}
+          className="offersInner"
+          style={{
+            display: "flex",
+            width: "100%",
+            maxHeight: "80vh",
+            minHeight: "30vh",
+            direction: "row",
+          }}
+        >
+          <div style={{ background: "blue", width: "100%", height: "100%" }}>
+            <h2>Offers</h2>
+          </div>
+          <div style={{ background: "yellow", width: "100%", height: "100%" }}>
+            <h3>Offers</h3>
+          </div>
+        </Grid>
       </Grid>
     </Grid>
   );

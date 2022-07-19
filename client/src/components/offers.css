@@ -1,0 +1,11 @@
+@media (max-width: 900px) {
+  .categories {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .offersInner {
+    display: flex;
+    flex-direction: column;
+  }
+}
