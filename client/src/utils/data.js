@@ -32,6 +32,17 @@ export const Data = [
 
   {
     id: 4,
+    title: "Ghost wire: Tokyo",
+    genre: "Action-adventure",
+    price: "$60.00",
+    info: "Top",
+    img: "/images/ghostwire.jpg",
+    category: "newReleases",
+    discount: 30,
+  },
+
+  {
+    id: 5,
     title: "LEGO star Wars; The Skywalker Saga",
     genre: "Action-adventure",
     price: "$40.00",
@@ -40,24 +51,13 @@ export const Data = [
     category: "newReleases",
     discount: 30,
   },
-
-  {
-    id: 5,
-    title: "EldenRing",
-    genre: "Tactical shooter",
-    price: "$29.99",
-    info: "Top",
-    // img: Img5,
-    category: "BestRated",
-    discount: 30,
-  },
   {
     id: 6,
     title: "Mortal Kombat 11",
     genre: "Fghting game",
     price: "$25.99",
     info: "Top",
-    // img: Img6,
+    img: "/images/mk11.425685d878cec8667fb0.jpg",
     category: "BestRated",
     discount: 30,
   },
@@ -73,12 +73,13 @@ export const Data = [
   },
   {
     id: 8,
-    title: "Ghost wire: Tokyo",
-    genre: "Action-adventure",
-    price: "$60.00",
+
+    title: "EldenRing",
+    genre: "Tactical shooter",
+    price: "$29.99",
     info: "Top",
-    img: "/images/ghostwire.jpg",
-    category: "newReleases",
+    img: "/images/eldenn.d3563257d0b8b51c69a4.png",
+    category: "BestRated",
     discount: 30,
   },
 ];

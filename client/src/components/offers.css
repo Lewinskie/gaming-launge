@@ -1,11 +1,6 @@
-@media (max-width: 900px) {
-  .categories {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .offersInner {
-    display: flex;
-    flex-direction: column;
-  }
+.item:hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
 }
