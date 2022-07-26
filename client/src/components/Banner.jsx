@@ -12,22 +12,22 @@ const Banner = () => {
     {
       name: "Free Shipping",
       description: "On orders over $100",
-      icon: <RocketLaunch sx={{ height: "50px", width: "50px" }} />,
+      icon: <RocketLaunch sx={{ height: "40px", width: "40px" }} />,
     },
     {
       name: "Free Returns",
       description: "We accept returns within 7 days",
-      icon: <RotateLeft sx={{ height: "50px", width: "50px" }} />,
+      icon: <RotateLeft sx={{ height: "40px", width: "40px" }} />,
     },
     {
       name: "20% off 1st purchase",
       description: "When you sign up",
-      icon: <ErrorOutline sx={{ height: "50px", width: "50px" }} />,
+      icon: <ErrorOutline sx={{ height: "40px", width: "40px" }} />,
     },
     {
       name: "24/7 Support",
       description: "We are here to help",
-      icon: <Support sx={{ height: "50px", width: "50px" }} />,
+      icon: <Support sx={{ height: "40px", width: "40px" }} />,
     },
   ];
   return (
@@ -58,7 +58,7 @@ const Banner = () => {
             <Typography variant="h5" sx={{ color: "black" }}>
               {item.name}
             </Typography>
-            <Typography style={{ color: "white" }}>
+            <Typography style={{ color: "#DED1C9" }}>
               {item.description}
             </Typography>
           </div>

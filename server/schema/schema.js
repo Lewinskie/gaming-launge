@@ -63,9 +63,9 @@ const mutation = new GraphQLObjectType({
           type: new GraphQLEnumType({
             name: "Categories",
             values: {
-              ComingSoon: { value: "Coming Soon" },
-              NowTrending: { value: "Now Trending" },
-              BestRated: { value: "Best Rated" },
+              upcoming: { value: "Coming Soon" },
+              trending: { value: "Now Trending" },
+              best: { value: "Best Rated" },
             },
           }),
         },
@@ -133,9 +133,9 @@ const mutation = new GraphQLObjectType({
           type: new GraphQLEnumType({
             name: "updatedCategories",
             values: {
-              ComingSoon: { value: "Coming Soon" },
-              NowTrending: { value: "Now Trending" },
-              BestRated: { value: "Best Rated" },
+              upcoming: { value: "Coming Soon" },
+              trending: { value: "Now Trending" },
+              best: { value: "Best Rated" },
             },
           }),
         },

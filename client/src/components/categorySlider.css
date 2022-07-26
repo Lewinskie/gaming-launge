@@ -1,0 +1,3 @@
+.card:hover + .show {
+  display: block;
+}

@@ -22,10 +22,11 @@ const OffersHero = () => {
               width: "100%",
               height: "200px",
               display: notMobile ? "block" : "none",
+              position: "relative",
             }}
             sx={{
               ":hover": {
-                transform: "scale(0.95) ",
+                transform: "scale(0.98) ",
                 transition: "all 0.3s ease-in-out",
                 cursor: "pointer",
               },
@@ -41,6 +42,24 @@ const OffersHero = () => {
                 borderRadius: "0.5rem",
               }}
             />
+            <div
+              style={{
+                position: "absolute",
+                bottom: "5%",
+                left: "5%",
+              }}
+            >
+              <Btn
+                style={{
+                  color: "black",
+                  background: "rgba(255,255,255,0.2)",
+                  backdropFilter: "blur(10px)",
+                }}
+              >
+                Buy now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <ArrowForwardIos />
+              </Btn>
+            </div>
           </Grid>
         ) : (
           index === 4 && (
@@ -50,10 +69,10 @@ const OffersHero = () => {
               xs={12}
               sm={12}
               md={7}
-              style={{ width: "100%", height: "200px" }}
+              style={{ width: "100%", height: "200px", position: "relative" }}
               sx={{
                 ":hover": {
-                  transform: "scale(0.95) ",
+                  transform: "scale(0.98) ",
                   transition: "all 0.3s ease-in-out",
                   cursor: "pointer",
                 },
@@ -69,6 +88,24 @@ const OffersHero = () => {
                   borderRadius: "0.5rem",
                 }}
               />
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "5%",
+                  left: "5%",
+                }}
+              >
+                <Btn
+                  style={{
+                    color: "black",
+                    background: "rgba(255,255,255,0.2)",
+                    backdropFilter: "blur(10px)",
+                  }}
+                >
+                  Buy now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <ArrowForwardIos />
+                </Btn>
+              </div>
             </Grid>
           )
         )
