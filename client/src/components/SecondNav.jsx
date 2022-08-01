@@ -44,7 +44,8 @@ const SecondNav = () => {
             <Typography
               variant="h6"
               className="links"
-              style={{ color: "#434E5A" }}
+              style={{ color: "white" }}
+              sx={{ ":hover": { color: "red" } }}
             >
               {name}
             </Typography>

@@ -76,7 +76,7 @@ const ProductCard = ({
               right: right,
             }}
           >
-            {btn ? (
+            {btn === "pre-order" ? (
               <Btn
                 sx={{
                   color: "black",
@@ -85,7 +85,7 @@ const ProductCard = ({
                 }}
                 size="small"
               >
-                <ShoppingCart />
+                {btn}
               </Btn>
             ) : (
               <Btn

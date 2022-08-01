@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SecondNav from "./components/SecondNav";
+import { Hr } from "./utils/Hr";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         </Routes>
       </Grid>
       <Grid item xs={12}>
+        <Hr />
         <Footer />
       </Grid>
     </Grid>

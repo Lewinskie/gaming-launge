@@ -1,23 +1,18 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { Btn } from "../utils/Btns";
+import Slider from "react-slick";
+// import { Btn } from "../utils/Btns";
 import { Data } from "../utils/data";
 import ProductCard from "./ProductCard";
-import Sliders from "./Sliders";
 import Tilt from "react-parallax-tilt";
-import { useMediaQuery } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const ProdCategories = () => {
-  const isMobile = useMediaQuery("(max-width:750px)");
-
-  // Here we filtered out the products that are not in the category "Accessories and Consoles"
+const AccessoriesAndConsoles = () => {
+  // Here we filtered out the products that are in the category "Accessories and Consoles"
   const filteredData = Data.filter(
-    (item) => item.category !== "accessories" && item.category !== "consoles"
+    (item) => item.category === "accessories" || item.category === "consoles"
   );
-  const categories = filteredData.map((item) => item.category);
-
-  const uniqueCategories = [...new Set(categories)];
-  // Slider settings
+  console.log(filteredData);
   const settings = {
     dots: true,
     infinite: true,
@@ -80,59 +75,60 @@ const ProdCategories = () => {
       },
     ],
   };
+  const tiltSettings = {
+    glare: true,
+    maxGlare: 1,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+    perspective: 1000,
+    flipHorizontal: true,
+  };
+
   return (
-    <div
-      style={{
-        background: "rgba(255,255,255,0.2)",
-        backdropFilter: "blur(10px)",
-        padding: "1rem",
-        borderRadius: "0.5rem",
-        marginTop: "1rem",
-      }}
-    >
+    <div style={{ padding: "3rem" }}>
       <div
         style={{
+          margin: "2rem 0rem 2rem 0rem",
           display: "flex",
-          justifyContent: "space-evenly",
-          flexDirection: isMobile ? "column" : "row",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
-        {uniqueCategories.map((category) => (
-          <Btn key={category}>
-            <Typography
-              variant="h6"
-              sx={{
-                color: "white",
-                "&:hover": {
-                  color: "gray",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              {category}
-            </Typography>
-          </Btn>
-        ))}
+        <Typography variant="h5">ACCESSORIES & CONSOLES</Typography>
+        <Typography>
+          <Link to="/shop">view more products</Link>
+        </Typography>
       </div>
-      <div style={{ paddingBottom: "1rem" }}>
-        <Sliders sliderSettings={settings}>
-          {Data.map((item) => (
-            <Tilt key={item.id}>
-              <ProductCard
-                top="275px"
-                left="20px"
-                img={item.img}
-                info={item.info}
-                genre={item.genre}
-                title={item.title}
-                price={item.price}
-              />
+
+      <div>
+        <Slider {...settings}>
+          {filteredData.map((item) => (
+            <Tilt {...tiltSettings}>
+              <div
+                style={{
+                  margin: "0.5rem",
+                  background: "rgba(255,255,255,0.2)",
+                  backdropFilter: "blur(5px)",
+                  borderRadius: "0.5rem",
+                }}
+              >
+                <ProductCard
+                  key={item.id}
+                  height="250px"
+                  img={item.img}
+                  border="1px solid #ccc"
+                  price={item.price}
+                  title={item.title}
+                  info={item.info}
+                  bottom="70px"
+                  left="5px"
+                />
+              </div>
             </Tilt>
           ))}
-        </Sliders>
+        </Slider>
       </div>
     </div>
   );
 };
 
-export default ProdCategories;
+export default AccessoriesAndConsoles;

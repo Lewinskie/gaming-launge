@@ -1,5 +1,7 @@
+import AccessoriesAndConsoles from "../components/AccessoriesAndConsoles";
 import Banner from "../components/Banner";
 import ComingSoon from "../components/ComingSoon";
+import Newsletter from "../components/Newsletter";
 import Offers from "../components/Offers";
 import OffersHero from "../components/OffersHero";
 import ProdCategories from "../components/ProdCategories";
@@ -14,6 +16,8 @@ const Home = () => {
       <ProdCategories />
       <Hr />
       <ComingSoon />
+      <Newsletter />
+      <AccessoriesAndConsoles />
     </div>
   );
 };
